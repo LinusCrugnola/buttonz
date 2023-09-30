@@ -29,11 +29,13 @@ export function activate(context: vscode.ExtensionContext) {
     const command1 = config.get('launch', 'echo "launch"');
     const command2 = config.get('build', 'echo "build"');
     const command3 = config.get('clean', 'echo "clean"');
+    const command4 = config.get('upload', 'echo "upload"');
 
     // Define terminals
     const launchTerminal = 'Launch';
     const buildTerminal = 'Build';
     const cleanTerminal = 'Clean';
+    const uploadTerminal = 'Upload';
 
     // Register command handlers
     vscode.commands.registerCommand('buttonz.launch', () => {
@@ -46,6 +48,10 @@ export function activate(context: vscode.ExtensionContext) {
 
     vscode.commands.registerCommand('buttonz.clean', () => {
         runCommandInTerminal(cleanTerminal, command3);
+    });
+
+    vscode.commands.registerCommand('buttonz.upload', () => {
+        runCommandInTerminal(uploadTerminal, command4);
     });
 }
 

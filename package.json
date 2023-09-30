@@ -31,6 +31,11 @@
         "command": "buttonz.clean",
         "title": "Clean",
         "icon": "$(trash)"
+      },
+      {
+        "command": "buttonz.upload",
+        "title": "Upload",
+        "icon": "$(cloud-upload)"
       }
     ],
     "menus": {
@@ -45,6 +50,10 @@
         },
         {
           "command": "buttonz.clean",
+          "group": "navigation"
+        },
+        {
+          "command": "buttonz.upload",
           "group": "navigation"
         }
       ]
@@ -63,6 +72,10 @@
         "buttonz.clean": {
             "type": "string",
             "default": "echo 'Command 3'"
+        },
+        "buttonz.upload": {
+            "type": "string",
+            "default": "echo 'Command 4'"
         }
       }
     }
